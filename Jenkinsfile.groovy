@@ -1,8 +1,20 @@
 pipeline {
+    agent any
+
     stages {
-        stage('Example Build') {
+        stage('Build') {
             steps {
-                echo 'mvn -B clean verify'
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
