@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                scm
+                scm checkout
                 echo 'Deploying....'
                 script{
                 // ansiblePlaybook credentialsId: 'private_key', inventory: 'inventories/a/hosts', playbook: 'my_playbook.yml's
